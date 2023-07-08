@@ -121,16 +121,29 @@ ul {
 
 .hero-section{
     padding: 188px 0;
-    background-image: url(../images/hero-bg.jpg);
+    background: url(../images/hero-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-color:var(--secondary-color);
+    background-position:center;
+    position: relative;
+    z-index: 1;
+    
+}
+.hero-section:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(46, 47, 66, 0.7);
 }
 .hero-section .container{
     flex-direction: column;
 }
 .hero-title{
+    z-index: 3;
     margin:0 auto;  
     color: #ffffff;
     font-size: 56px;
@@ -140,6 +153,7 @@ ul {
     text-align: center;
 }
 .title-button{
+    z-index: 3;
     margin:0 auto;
     margin-top: 48px;;
     display: block;
@@ -190,9 +204,18 @@ ul {
 .benefits-point:nth-child(4){
     margin-right: 0;
 }
-
+.icon{
+    width: 264px;
+    margin:0;
+    background-color: var(--primary-white-color);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 112px;
+}
 .benefits-title{
     margin-bottom: 8px; 
+    margin-top: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -254,6 +277,7 @@ ul {
     margin-bottom: 72px;
 }
 .team-list{
+    width: 1128px;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
@@ -286,6 +310,31 @@ ul {
     letter-spacing: 0.02em;
     color:var(--primary-color);
     text-align: center;
+}
+.customers-section{
+    padding: 120px 156px;
+}
+.customers-section .container{
+    flex-direction: column;
+}
+.customers-section-title{
+    text-align: center; 
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color:var(--secondary-color);
+    letter-spacing: 0.02em;
+}
+.customers-list{
+    display: flex;
+    gap: 24px;
+}
+.customers-list-point{
+    padding: 16px 32px;
+    width: calc((100% - 120px) / 6);
+    border:1px solid #8E8F99;
+    border-radius: 4px;
 }
 
 .main-section{
