@@ -340,6 +340,7 @@ ul {
 }
 .tralink-icon:hover{
     cursor: pointer;
+    background-color: #404BBF;
 }
 .icon{
     width: 16px;
