@@ -59,10 +59,12 @@ ul {
 
 .nav-link{
     padding: 24px 0;
+    position: relative;
 }
-.nav-link:after{
+.nav-link:active::after{
     content:'';
-    display:block;
+    position:absolute;
+    
 
 }
 .link{
@@ -130,10 +132,10 @@ ul {
     background-repeat: no-repeat;
     background-position:center;
     position: relative;
-    z-index: 1;
+    z-index:1
     
 }
-.hero-section:after{
+.hero-section::after{
     content: '';
     position: absolute;
     top: 0;
@@ -210,12 +212,16 @@ ul {
     margin-right: 0;
 }
 
-.benefits-icon{
+.benefits-icon-container{
     padding: 24px 100px;
     background-color: var(--primary-white-color);
     align-items: center;
     display: flex;
     justify-content: space-around;
+}
+.benefits-icon{
+    width: 64px;
+    height: 64px;
 }
 
 .benefits-title{
@@ -329,24 +335,21 @@ ul {
     width: 40px;
     height: 40px;
 }
-.tralink-icon{
+.traling-icon-link{
     display: flex;
     padding: 12px;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    
     background-color: #4D5AE5;
 }
-.tralink-icon:hover{
+.traling-icon-link:hover{
     cursor: pointer;
     background-color: #404BBF;
 }
-.icon{
+.traling-icon{
     width: 16px;
     height: 16px;
-    stroke:none;
-    fill:#fff;
 }
 .customers-section{
     padding: 120px 156px;
@@ -383,6 +386,9 @@ ul {
 }
 .customers-link:hover{
     border-color:#404BBF;
+}
+.customers-icon{
+    stroke:red;
 }
 .customers-link:hover .customers-icon{
     border-color:#404BBF;
@@ -476,3 +482,45 @@ ul {
     letter-spacing: 0.02em;
 }
 
+.backdrop{
+    z-index: 100;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.40);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: 0;
+    visibility: hidden;
+}
+.modal{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+    background-color: #FCFCFC;
+    z-index: 4;
+}
+.close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border:none;
+    border-radius: 50%;
+    background-color: #E7E9FC;  
+}
+.close-btn:hover{
+    cursor: pointer;
+}
+.modal-icon{
+    stroke:red;
+   
+}
