@@ -22,7 +22,6 @@ h2,
 h3,
 p,
 ul {
-   
   padding: 0;
 }
 
@@ -30,6 +29,9 @@ ul {
 
 .header{
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .container{
@@ -40,7 +42,7 @@ ul {
 }
 
 .header .container{
-    align-items:flex-start;
+    align-items: center;
     justify-content:space-between;
 }
 
@@ -60,13 +62,24 @@ ul {
 .nav-link{
     padding: 24px 0;
     position: relative;
+    transition: color 250ms ease-in;
 }
-.nav-link:active::after{
+.nav-link.current::after{
     content:'';
-    position:absolute;
-    
-
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left:0;
+    bottom:4px;
+    background-color: #404BBF;
+    border-radius: 2px;
 }
+
+.nav-link:hover, .nav-link:focus{
+    color:#404bbf
+}
+
 .link{
     color:var(--secondary-color);
     font-weight: 500;
@@ -75,12 +88,7 @@ ul {
     text-decoration: none;
 }
 
-.nav-link:hover, .nav-link:focus{
-    color:#404bbf
-}
-
-.logo{
-    display: inline-block; 
+.logo{ 
     margin-right: 76px;
     font-family:'Raleway', sans-serif;
     font-weight: 800;
@@ -118,6 +126,7 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-size: 16px;
+    transition: color 250ms ease-in;
 }
 
 .address-link:hover, .address-link:focus{
@@ -127,7 +136,8 @@ ul {
 
 .hero-section{
     padding: 188px 0;
-    background: url(../images/hero-bg.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+  rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -135,21 +145,11 @@ ul {
     z-index:1
     
 }
-.hero-section::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    background: rgba(46, 47, 66, 0.7);
-}
+
 .hero-section .container{
     flex-direction: column;
 }
 .hero-title{
-    z-index: 3;
     margin:0 auto;  
     color: #ffffff;
     font-size: 56px;
@@ -159,7 +159,6 @@ ul {
     text-align: center;
 }
 .title-button{
-    z-index: 3;
     margin:0 auto;
     margin-top: 48px;;
     display: block;
@@ -175,6 +174,7 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+    transition: background-color 250ms ease-in;
 }
 .title-button:hover, .title-button:focus{
     background-color: #404BBF;
@@ -342,8 +342,10 @@ ul {
     align-items: center;
     justify-content: center;
     background-color: #4D5AE5;
+    transition: background-color 250ms ease-in;
 }
-.traling-icon-link:hover{
+.traling-icon-link:hover, 
+.traling-icon-link:focus{
     cursor: pointer;
     background-color: #404BBF;
 }
@@ -373,25 +375,26 @@ ul {
     gap: 20px;
 }
 .customers-list-point{
-    
+    width:calc((100% - 120) / 6);
 }
 .customers-link{
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     width: 168px;
     height: 88px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
+    transition: border-color 250ms ease-in, fill 250ms ease-in;
 }
-.customers-link:hover{
+.customers-link:hover, .customers-link:focus{
     border-color:#404BBF;
 }
 .customers-icon{
-    stroke:red;
+    fill:#8E8F99;
 }
 .customers-link:hover .customers-icon{
-    border-color:#404BBF;
+    fill:#404BBF;
 }
 .main-section{
     padding-top: 96px; 
@@ -422,6 +425,7 @@ ul {
     border: 1px solid var(--button-border-color);
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 250ms ease-in, color 250ms ease-in;
 }
 
 .button:hover, .button:focus{
@@ -439,10 +443,18 @@ ul {
 }
 
 .img-point{
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 48px) / 3);  
+    position: relative;
+    overflow: hidden;
 }
 .img-point:nth-child(3n){
     margin-right: 0;
+}
+.img-point:hover .overlay{
+    transform:translateY(0);
+}
+.img-point:focus .overlay{
+    transform:translateY(0);
 }
 .list-img-title{
     font-family: "Roboto", sans-serif;  
@@ -459,27 +471,108 @@ ul {
     border-top: none;
 }
 
+.wrapper{
+    
+    width: 360px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay{
+    background-color: var(--textcolor);
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top:0;
+    left:0;
+    transform:translateY(100%);
+    transition: 250ms ease-in;
+    
+    
+}
+
+.overlay-text{
+    padding-top:40px;
+    padding-left: 40px;
+    width: 296px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    color:var(--primary-white-color);
+}
+
 .footer{
     background-color:var(--secondary-color);
     padding: 100px 0;
 }
-
 .footer .container{
-    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap:120px;
 }
-.footer .logo{
-    margin:0;
+.footer-logo{
+    font-family:'Raleway', sans-serif;
+    font-weight: 800;
+    color:var(--textcolor);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.footer-logo.link{
     display: inline-block;
     margin-bottom: 16px;
 }
+
 .span-logo-footer{
     color:#f4f4fd;
 }
+
 .footer-paragraph{
+    margin: 0;
     max-width: 264px;
     line-height: 1.5;
     color:var(--primary-white-color);
     letter-spacing: 0.02em;
+}
+.footer-social{
+    color:#ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+.footer-social-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+}
+.footer-traling-icon-link{
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D5AE5;
+    transition: background-color 250ms ease-in;
+    
+}
+.footer-traling-icon-link:hover, 
+.footer-traling-icon-link:focus{
+    background-color: #31D0AA;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: 0;
+    visibility: hidden;
 }
 
 .backdrop{
@@ -491,11 +584,7 @@ ul {
     height: 100%;
     background-color: rgba(46, 47, 66, 0.40);
 }
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: 0;
-    visibility: hidden;
-}
+
 .modal{
     position:absolute;
     top:50%;
@@ -505,7 +594,7 @@ ul {
     height: 584px;
     border-radius: 4px;
     background-color: #FCFCFC;
-    z-index: 4;
+    z-index: 100;
 }
 .close-btn{
     position: absolute;
@@ -521,6 +610,5 @@ ul {
     cursor: pointer;
 }
 .modal-icon{
-    stroke:red;
-   
+
 }
