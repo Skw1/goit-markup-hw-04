@@ -366,14 +366,14 @@ ul {
     fill:var(--primary-white-color);
 }
 .customers-section{
-    padding: 120px 0;
+    
 }
 .customers-section .container{
     flex-direction: column;
 }
 .customers-section-title{
     text-align: center; 
-    margin-bottom: 72px;
+        margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -559,9 +559,10 @@ ul {
 .footer-paragraph{
     max-width: 264px;
     line-height: 1.5;
+    margin-bottom: 16px;
     color:var(--primary-white-color);
     letter-spacing: 0.02em;
-    margin-bottom: 16px;
+    
 }
 .footer-social{
     color:#ffffff;
