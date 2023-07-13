@@ -359,21 +359,20 @@ ul {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .traling-icon-link:hover, .traling-icon-link:focus{
-    cursor: pointer;
     background-color: #404BBF;
 }
 .traling-icon{
     fill:var(--primary-white-color);
 }
 .customers-section{
-    
+    padding: 120px 0;
 }
 .customers-section .container{
     flex-direction: column;
 }
 .customers-section-title{
     text-align: center; 
-        margin-bottom: 72px;
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -401,16 +400,14 @@ ul {
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-link:hover{
+.customers-link:hover, .customers-link:focus{
     border-color:#404BBF;
 }
-.customers-link:focus{
-    border-color:#404BBF;
-}
+
 .customers-icon{
     fill:currentColor;
 }
-.customers-link:hover .customers-icon{
+.customers-link:hover, .customers-link:focus .customers-icon{
     fill:#404BBF;
 }
 .main-section{
@@ -468,12 +465,10 @@ ul {
 .img-point:nth-child(3n){
     margin-right: 0;
 }
-.img-point:hover .overlay{
+.img-point:hover, .img-point:focus  .overlay{
     transform:translateY(0);
 }
-.img-point:focus .overlay{
-    transform:translateY(0);
-}
+
 .list-img-title{
     font-family: "Roboto", sans-serif;  
     font-style: normal;
@@ -487,7 +482,6 @@ ul {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .list-img .link:hover {
-    
     box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
 }
 .list-img-container{
@@ -592,12 +586,10 @@ ul {
     background-color: #4D5AE5;
     transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
-.footer-traling-icon-link:hover {
+.footer-traling-icon-link:hover, .footer-traling-icon-link:focus {
     background-color: #31D0AA;
 }
-.footer-traling-icon-link:focus{
-    background-color: #31D0AA; 
-}
+
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -644,15 +636,12 @@ ul {
     background-color: #E7E9FC; 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.close-btn:hover{
+.close-btn:hover, .close-btn:focus{
     cursor: pointer;
     background-color: #404bbf;
     border: none;
 }
-.close-btn:focus{
-    background-color: #404bbf; 
-    border: none;
-}
+
 .modal-icon{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
