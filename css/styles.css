@@ -83,7 +83,8 @@ ul {
     border-radius: 2px;
 }
 
-.nav-link:hover, .nav-link:focus{
+.nav-link:hover, 
+.nav-link:focus{
     color:#404bbf
 }
 
@@ -136,7 +137,8 @@ ul {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-link:hover, .address-link:focus{
+.address-link:hover,
+.address-link:focus{
     color: #404bbf;
 
 }
@@ -185,7 +187,8 @@ ul {
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.title-button:hover, .title-button:focus{
+.title-button:hover,
+.title-button:focus{
     background-color: #404bbf;
 }
 .benefits-section{
@@ -358,7 +361,8 @@ ul {
     background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.traling-icon-link:hover, .traling-icon-link:focus{
+.traling-icon-link:hover, 
+.traling-icon-link:focus{
     background-color: #404bbf;
 }
 .traling-icon{
@@ -400,14 +404,16 @@ ul {
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-link:hover, .customers-link:focus{
+.customers-link:hover, 
+.customers-link:focus{
     border-color:#404bbf;
 }
 
 .customers-icon{
     fill: currentColor;
 }
-.customers-link:hover, .customers-link:focus .customers-icon{
+.customers-link:hover .customers-icon, 
+.customers-link:focus .customers-icon{
     fill:#404BBF;
 }
 .main-section{
@@ -465,7 +471,8 @@ ul {
 .img-point:nth-child(3n){
     margin-right: 0;
 }
-.img-point:hover, .img-point:focus  .overlay{
+.img-point:hover .overlay, 
+.img-point:focus  .overlay{
     transform:translateY(0);
 }
 
