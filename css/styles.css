@@ -372,12 +372,12 @@ ul {
 }
 .customers-section-title{
     text-align: center; 
-    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     color:var(--secondary-color);
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
     
 }
 .customers-list{
@@ -405,7 +405,7 @@ ul {
 }
 
 .customers-icon{
-    fill:currentColor;
+    fill: currentColor;
 }
 .customers-link:hover, .customers-link:focus .customers-icon{
     fill:#404BBF;
@@ -568,6 +568,7 @@ ul {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
+    margin-bottom: 16px;
 }
 .footer-social-list{
     display: flex;
