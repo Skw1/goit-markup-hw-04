@@ -472,7 +472,7 @@ ul {
     margin-right: 0;
 }
 .img-point:hover .overlay, 
-.img-point:focus  .overlay{
+.img-point:focus .overlay{
     transform:translateY(0);
 }
 
@@ -496,7 +496,8 @@ ul {
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-.list-img .link:hover, .list-img .link:focus .overlay{
+.list-img .link:hover .overlay, 
+.list-img .link:focus .overlay{
     transform: translateY(0%);
 }
 .wrapper{
