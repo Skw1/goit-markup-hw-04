@@ -497,8 +497,8 @@ ul {
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-.list-img .link:hover .overlay, 
-.list-img .link:focus .overlay{
+.list-img .link:hover .overlay-text, 
+.list-img .link:focus .overlay-text{
     transform: translateY(0);
 }
 .wrapper{
@@ -524,7 +524,6 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color:var(--primary-white-color);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     transform: translateY(100%);
 }
 
