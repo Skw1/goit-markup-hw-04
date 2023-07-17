@@ -561,7 +561,6 @@ ul {
 }
 
 .footer-paragraph{
-    margin-bottom: 16px;
     max-width: 264px;
     line-height: 1.5;
     color:var(--primary-white-color);
@@ -574,8 +573,8 @@ ul {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 .footer-social-list{
     display: flex;
