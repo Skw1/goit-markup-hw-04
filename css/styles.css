@@ -375,13 +375,14 @@ ul {
     flex-direction: column;
 }
 .customers-section-title{
+    margin-bottom: 72px;
     text-align: center; 
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     color:var(--secondary-color);
     letter-spacing: 0.02em;
-    margin-bottom: 72px;
+    
 
 }
 .customers-list{
