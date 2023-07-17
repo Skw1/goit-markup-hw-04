@@ -552,7 +552,7 @@ ul {
 
 .footer-logo.link{
     display: inline-block;
-    margin-bottom: 16px;
+    
     
 }
 
@@ -565,8 +565,7 @@ ul {
     max-width: 264px;
     line-height: 1.5;
     color:var(--primary-white-color);
-    letter-spacing: 0.02em;
-    
+    letter-spacing: 0.02em; 
 }
 .footer-social{
     color:#ffffff;
