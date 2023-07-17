@@ -507,9 +507,6 @@ ul {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
-.overlay-text.overlay{
-   
-}
 
 .overlay-text{
     padding: 40px 32px;
