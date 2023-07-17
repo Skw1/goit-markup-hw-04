@@ -23,6 +23,7 @@ h2,
 h3,
 p,
 ul {
+    margin: 0;
   padding: 0;
 }
 
@@ -43,6 +44,7 @@ ul {
 }
 
 .header .container{
+    height: 71px;
     align-items: center;
     justify-content:space-between;
 }
@@ -566,8 +568,11 @@ ul {
     color:var(--primary-white-color);
     letter-spacing: 0.02em; 
 }
+.footer-social-container{
+    display: flex;
+    flex-direction: column;
+}
 .paragraph-social{
-    margin-bottom: 16px;
     color:#ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -575,6 +580,7 @@ ul {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 .footer-social-list{
     display: flex;
