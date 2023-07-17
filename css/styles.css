@@ -487,6 +487,7 @@ ul {
 .list-img .link{
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    
 }
 .list-img .link:hover,
 .list-img .link:focus {
@@ -500,7 +501,8 @@ ul {
 
 .wrapper{
     position: relative;
-    overflow: hidden;
+    overflow: hidden ;  
+    
 }
 
 .overlay-text{
@@ -521,7 +523,7 @@ ul {
 
 .list-img .link:hover .overlay-text, 
 .list-img .link:focus .overlay-text{
-    transform: translateY(0%);
+    transform: translateY(0);
     
 }
 
