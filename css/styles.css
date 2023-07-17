@@ -552,6 +552,8 @@ ul {
 
 .footer-logo.link{
     display: inline-block;
+    margin-bottom: 16px;
+ 
 }
 
 .span-logo-footer{
@@ -565,7 +567,8 @@ ul {
     color:var(--primary-white-color);
     letter-spacing: 0.02em; 
 }
-.footer-social{
+.paragraph-social{
+    margin-bottom: 16px;
     color:#ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -573,7 +576,6 @@ ul {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
-    margin-bottom: 16px;
 }
 .footer-social-list{
     display: flex;
